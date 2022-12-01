@@ -9,22 +9,26 @@ namespace CSharp_Shop_2
     public class Acqua
     {
         //PROPRIETA o ATTRIBUTI
-        private int litri;
+        private double litri;
         private double ph;
         private string sorgente;
         private double litriDaBere;
+        private double bottiglia;
+        private double litriMessi;
 
         //COSTRUTTORE
-        public Acqua(int litri, double ph, string sorgente,double litriDaBere)
+        public Acqua(double litri, double ph, string sorgente,double litriDaBere, double bottiglia, double litriMessi)
         {
             this.litri = litri;
             this.ph= ph;
             this.sorgente = sorgente;
             this.litriDaBere = litriDaBere;
+            this.bottiglia = bottiglia;
+            this.litriMessi = litriMessi;
         }
 
         //GETTERs
-        public int GetLitri()
+        public double GetLitri()
         {
             return litri;
         }
@@ -40,9 +44,13 @@ namespace CSharp_Shop_2
         {
             return litriDaBere;
         }
+        public double GetBottiglia()
+        {
+            return bottiglia;
+        }
 
         //SETTERs
-        public int SetLitri()
+        public double SetLitri()
         {
             return this.litri;
         }
@@ -54,10 +62,23 @@ namespace CSharp_Shop_2
         //METODI PUBBLICI
         public void Bevi()
         {
-            if (litriDaBere <= litri )
+            if (litriDaBere <= litri)
             {
-                litriDaBere = litri - litriDaBere;
-                Console.Write( litriDaBere );
+                litri = litri - litriDaBere;
+            }
+        }
+        public void Svuota()
+        {
+            if (litriDaBere >= litri)
+            {
+                litri = 0;
+            }
+        }
+        public void Riempi()
+        {
+            if(litriMessi < bottiglia)
+            {
+                
             }
         }
     }
