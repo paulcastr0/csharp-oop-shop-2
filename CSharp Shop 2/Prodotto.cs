@@ -8,6 +8,7 @@ namespace CSharp_Shop_2
 {
     public class Prodotto
     {
+        //PROPRIETA
         private int codice;
         private string name;
         private string description;
@@ -43,7 +44,7 @@ namespace CSharp_Shop_2
             this.prezzo = Math.Round(prezzo, 2);
             this.IVA = IVA;
         }
-
+        //GETTERS & SETTERS
         public int GetCodice()
         {
             return this.codice;
@@ -74,6 +75,7 @@ namespace CSharp_Shop_2
             return this.prezzo;
         }
 
+        //METODI PUBBLICI
         public double GetPrezzoIVA()
         {
             double prezzoIVA = (this.prezzo + (this.prezzo * this.IVA) / 100);
@@ -117,7 +119,7 @@ namespace CSharp_Shop_2
         }
 
 
-
+        //METODI PUBBLICI
         public string StampaPrezzoBase()
         {
             string prezzoBase = (this.prezzo).ToString();
