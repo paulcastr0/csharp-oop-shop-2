@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CSharp_Shop_2;
+using System.Runtime.CompilerServices;
 
 Console.WriteLine("Hello, World!");
 
@@ -13,3 +14,4 @@ foreach (Prodotto prodotto in scaffaliNegozio)
 {
     prodotto.StampaProdotto();
 }
+
